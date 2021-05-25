@@ -1,0 +1,21 @@
+class B {
+	public int x;
+	public int y;	
+}
+
+class A extends B {
+	public int a;
+	public B b;
+	public A(){
+		this.a = 2;
+	}
+
+}
+interface I {}
+
+class C implements I{
+	private int x;
+	public void setX(A a) {
+		this.x = a.b.y;
+	}
+}
